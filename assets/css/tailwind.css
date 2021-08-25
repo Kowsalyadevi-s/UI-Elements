@@ -39,16 +39,55 @@
   input[type="submit"],
   input[type="button"] {
     @apply font-medium bg-white cursor-pointer  px-3 py-2 transition ease-in duration-200 text-gray-700 rounded shadow-sm border border-gray-300 hover:bg-gray-50 hover:border-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 focus:ring-offset-gray-200;
+
+    &.rounded-full {
+      @apply p-3;
+    }
   }
 }
 
 @layer components {
+  /* Buttons */
   .primary {
     @apply bg-primary-600 border-primary-700 text-white hover:bg-primary-700 hover:border-primary-800 hover:text-white focus:ring-primary-500 focus:ring-offset-primary-200;
   }
   .dark {
     @apply bg-gray-900 border-black text-white hover:bg-gray-800 hover:border-gray-900 hover:text-white;
   }
+
+  /* Grouped Buttons */
+  .grouped {
+    & button {
+      @apply rounded-none focus:outline-none focus:ring-0;
+    }
+
+    & button:first-child {
+      @apply rounded-none rounded-l;
+    }
+
+    & button:last-child {
+      @apply rounded-none rounded-r;
+    }
+
+    /* Prevent double borders */
+    & button:not(:last-child) {
+      @apply border-r-0;
+    }
+
+    &:after {
+      content: "";
+      display: table;
+      @apply clear-both;
+    }
+
+    & svg {
+      @apply inline-block;
+    }
+  }
+
+  /* END: Grouped Buttons */
+
+  /* Badges */
 
   .badge {
     @apply inline-block px-3 py-0.5 text-sm font-normal rounded-full text-gray-700 bg-gray-200;
@@ -92,4 +131,5 @@
       @apply text-gray-100 bg-gray-900;
     }
   }
+  /* END: Badges */
 }
