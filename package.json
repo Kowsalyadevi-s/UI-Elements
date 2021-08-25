@@ -15,7 +15,7 @@
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/pwa": "^3.3.5",
     "@tkweb/btn": "0.0.7",
-    "@tkweb/ui-elements": "^1.0.12",
+    "@tkweb/ui-elements": "^1.0.13",
     "autoprefixer": "^10.3.1",
     "core-js": "^3.15.1",
     "h8-ui-element": "^1.0.6",
