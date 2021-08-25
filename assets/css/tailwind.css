@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-sm;
+  }
+  h1 {
+    @apply text-5xl font-bold;
+  }
+  h2 {
+    @apply text-4xl font-bold;
+  }
+  h3 {
+    @apply text-2xl font-bold;
+  }
+  h4 {
+    @apply text-xl font-bold;
+  }
+
+  h5 {
+    @apply text-lg font-bold;
+  }
+
+  h6 {
+    @apply text-sm font-bold;
+  }
+
+  p {
+    /* @apply text-base; */
+  }
+
+  a {
+    @apply text-blue-700 hover:underline hover:text-blue-600;
+  }
+
+  button,
+  input[type="submit"],
+  input[type="button"] {
+    @apply font-medium bg-white cursor-pointer  px-3 py-2 transition ease-in duration-200 text-gray-700 rounded shadow-sm border border-gray-300 hover:bg-gray-50 hover:border-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 focus:ring-offset-gray-200;
+  }
+}
+
+@layer components {
+  .primary {
+    @apply bg-primary-600 border-primary-700 text-white hover:bg-primary-700 hover:border-primary-800 hover:text-white focus:ring-primary-500 focus:ring-offset-primary-200;
+  }
+  .dark {
+    @apply bg-gray-900 border-black text-white hover:bg-gray-800 hover:border-gray-900 hover:text-white;
+  }
+
+  .badge {
+    @apply inline-block px-3 py-0.5 text-sm font-normal rounded-full text-gray-700 bg-gray-200;
+
+    &.primary {
+      @apply text-primary-800 bg-primary-100;
+      &.filled {
+        @apply text-primary-100 bg-primary-700;
+      }
+    }
+
+    &.secondary {
+      @apply text-secondary-800 bg-secondary-100;
+      &.filled {
+        @apply text-secondary-100 bg-secondary-700;
+      }
+    }
+
+    &.info {
+      @apply text-info-800 bg-info-100;
+      &.filled {
+        @apply text-info-100 bg-info-600;
+      }
+    }
+
+    &.positive {
+      @apply text-positive-800 bg-positive-100;
+      &.filled {
+        @apply text-positive-100 bg-positive-600;
+      }
+    }
+
+    &.negative {
+      @apply text-negative-800 bg-negative-100;
+      &.filled {
+        @apply text-negative-100 bg-negative-600;
+      }
+    }
+
+    &.dark {
+      @apply text-gray-100 bg-gray-900;
+    }
+  }
+}

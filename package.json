@@ -1,0 +1,30 @@
+{
+  "name": "h8-tailwind-css",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@bit/h8_.ui_components.login-api": "^1.0.0",
+    "@datay/dxc-components": "^0.1.1",
+    "@nuxt/content": "^1.14.0",
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/pwa": "^3.3.5",
+    "@tkweb/btn": "0.0.7",
+    "@tkweb/ui-elements": "^1.0.12",
+    "autoprefixer": "^10.3.1",
+    "core-js": "^3.15.1",
+    "h8-ui-element": "^1.0.6",
+    "h8-ui-lib-useronboarding": "0.0.4",
+    "nuxt": "^2.15.7",
+    "vue-click-outside": "^1.1.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^4.2.0",
+    "postcss": "^8.3.5"
+  }
+}
