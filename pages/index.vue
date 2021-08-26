@@ -410,9 +410,11 @@
             <badge class="negative filled">Badge</badge>
           </div>
           <div class="flex place-items-center relative space-x-1">
-            <Badge class="flex flex-wrap content-center" closable @closed="badgeClosed">
-              <div class="flex w-2 h-2 bg-gray-500 mr-1 rounded-full"></div>Out of Service
-            </Badge>
+            <Badge
+              class="flex flex-wrap content-center"
+              closable
+              @closed="badgeClosed"
+            >Out of Service</Badge>
             <Badge class="primary" closable @closed="badgeClosed">Out of Service</Badge>
             <Badge class="positive filled" closable @closed="badgeClosed">Out of Service</Badge>
             <badge class="primary">Badge</badge>
@@ -420,27 +422,11 @@
             <badge class="info">Badge</badge>
             <badge class="positive">Badge</badge>
             <badge class="negative">Badge</badge>
-            <div ref="badge" class="badge text-sm flex flex-wrap justify-center content-center">
-              <div class="w-5 h-5">
-                <span class="w-2 h-2 bg-red-500 inline-block rounded-full"></span>
-              </div>Operational
-              <span
-                class="hover:bg-white hover:bg-opacity-30 cursor-pointer flex flex-wrap content-center justify-center w-5 h-5 -mr-2 text-center ml-1 mt-0 rounded-full"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-3 w-3 inline-block"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </span>
-            </div>
+            <badge class="positive" status statusClass="negative">Badge</badge>
+            <badge status statusClass="warning">Badge</badge>
+            <badge status statusClass="info">Badge</badge>
+            <badge status statusClass="positive">Badge</badge>
+            <badge status>Badge</badge>
           </div>
         </div>
       </div>
