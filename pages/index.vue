@@ -2,7 +2,7 @@
   <div class="container mx-auto my-5">
     <h1>H8 UI Elements with Tailwind CSS</h1>
     <hr class="my-3" />
-    <div class="space-y-12 divide-y divide-gray-100">
+    <div class="space-y-12 divide-y divide-gray-100 mb-12">
       <div class="space-y-3">
         <h4 class="my-3">Buttons</h4>
         <div>
@@ -430,6 +430,96 @@
           </div>
         </div>
       </div>
+
+      <!-- Avatar -->
+      <div class="flex space-x-6">
+        <div>
+          <h4 class="my-3">Avatar</h4>
+          <div class="flex space-x-2 place-items-center">
+            <Avatar
+              size="xs"
+              userImage
+              imageSrc="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+            ></Avatar>
+            <Avatar
+              size="sm"
+              userImage
+              imageSrc="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+            ></Avatar>
+            <Avatar
+              userImage
+              imageSrc="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+            ></Avatar>
+            <Avatar
+              size="lg"
+              userImage
+              imageSrc="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+            ></Avatar>
+            <Avatar
+              size="xl"
+              userImage
+              imageSrc="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+            ></Avatar>
+            <Avatar
+              size="xxl"
+              userImage
+              imageSrc="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+            ></Avatar>
+          </div>
+          <div class="flex space-x-1 place-items-center">
+            <Avatar cls="info" size="xs" initial="TK"></Avatar>
+            <Avatar cls="warning" size="sm" initial="TK"></Avatar>
+            <Avatar size="sm" initial="TK"></Avatar>
+            <Avatar cls="positive" initial="TK"></Avatar>
+            <Avatar cls="negative" size="lg" initial="TK"></Avatar>
+            <Avatar cls="secondary" size="xl" initial="TK"></Avatar>
+            <Avatar cls="primary" size="xxl" initial="TK"></Avatar>
+          </div>
+          <div class="flex space-x-1 place-items-center">
+            <Avatar cls="info" size="sm" initial="K"></Avatar>
+            <Avatar cls="warning" size="sm" initial="K"></Avatar>
+            <Avatar size="sm" initial="K"></Avatar>
+            <Avatar cls="positive" size="sm" initial="K"></Avatar>
+            <Avatar cls="negative" size="sm" initial="K"></Avatar>
+            <Avatar cls="secondary" size="sm" initial="K"></Avatar>
+            <Avatar cls="primary" size="sm" initial="K"></Avatar>
+          </div>
+        </div>
+        <div>
+          <div class="flex space-x-2 my-5 place-items-center">
+            <div class="flex flex-wrap space-x-1 place-items-center">
+              <Avatar
+                size="xs"
+                userImage
+                class="mt-1"
+                imageSrc="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+              ></Avatar>
+              <p class="font-medium">John Mathew</p>
+            </div>
+            <dropdown cls="px-3 py-1 " right icon divider>
+              <template #icon>
+                <avatar
+                  imageSrc="https://uifaces.co/our-content/donated/6MWH9Xi_.jpg"
+                  userImage
+                  size="xs"
+                  class="flex mr-2 place-content-center"
+                  cls="positive"
+                ></avatar>Karthick Thangaraju
+              </template>
+              <div class="p-4">
+                <b>karthickt@teezle.com</b>
+                <p class="text-gray-500">Last login: Yesterday</p>
+              </div>
+              <div>
+                <dropdown-item link="/">My Profile</dropdown-item>
+                <dropdown-item link="/preferences">Preference</dropdown-item>
+              </div>
+              <dropdown-item>Logout</dropdown-item>
+            </dropdown>
+          </div>
+        </div>
+      </div>
+      <!-- END: Avatar -->
     </div>
   </div>
 </template>

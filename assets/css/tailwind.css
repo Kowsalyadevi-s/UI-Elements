@@ -44,6 +44,10 @@
       @apply p-3;
     }
   }
+
+  input[type="text"] {
+    @apply block h-9 border border-gray-400 rounded focus:shadow border-opacity-50;
+  }
 }
 
 @layer components {
@@ -133,7 +137,12 @@
         @apply text-negative-100 bg-negative-600;
       }
     }
-
+    &.warning {
+      @apply text-warning-900 bg-warning-100;
+      &.filled {
+        @apply text-warning-100 bg-warning-600;
+      }
+    }
     &.dark {
       @apply text-gray-100 bg-gray-900;
     }
@@ -166,4 +175,106 @@
   }
 
   /* END: Status */
+
+  /* Avatar */
+  .avatar {
+    & .avatar-image {
+      @apply mx-auto object-cover h-10 w-10 border border-white;
+      &.xs {
+        @apply h-6 w-6;
+      }
+
+      &.sm {
+        @apply h-8 w-8;
+      }
+
+      &.lg {
+        @apply h-12 w-12;
+      }
+
+      &.xl {
+        @apply h-14 w-14;
+      }
+
+      &.xxl {
+        @apply h-16 w-16;
+      }
+    }
+    & .initial {
+      @apply flex h-10 w-10 uppercase text-base place-items-center justify-center bg-gray-200 text-gray-900 border-2 border-white;
+      &.xs {
+        @apply text-xs h-6 w-6;
+      }
+
+      &.sm {
+        @apply text-sm h-8 w-8;
+      }
+
+      &.lg {
+        @apply text-lg font-medium h-12 w-12;
+      }
+
+      &.xl {
+        @apply text-lg font-medium h-14 w-14;
+      }
+
+      &.xxl {
+        @apply text-2xl font-medium h-16 w-16;
+      }
+
+      &.gray {
+        @apply text-gray-900 bg-gray-400;
+        &.filled {
+          @apply text-gray-900 bg-gray-500;
+        }
+      }
+
+      &.primary {
+        @apply text-primary-800 bg-primary-100;
+        &.filled {
+          @apply text-primary-100 bg-primary-700;
+        }
+      }
+
+      &.secondary {
+        @apply text-secondary-800 bg-secondary-100;
+        &.filled {
+          @apply text-secondary-100 bg-secondary-700;
+        }
+      }
+
+      &.info {
+        @apply text-info-800 bg-info-100;
+        &.filled {
+          @apply text-info-100 bg-info-600;
+        }
+      }
+
+      &.positive {
+        @apply text-positive-800 bg-positive-100;
+        &.filled {
+          @apply text-positive-100 bg-positive-600;
+        }
+      }
+
+      &.warning {
+        @apply text-warning-900 bg-warning-100;
+        &.filled {
+          @apply text-warning-100 bg-warning-600;
+        }
+      }
+
+      &.negative {
+        @apply text-negative-800 bg-negative-100;
+        &.filled {
+          @apply text-negative-100 bg-negative-600;
+        }
+      }
+
+      &.dark {
+        @apply text-gray-100 bg-gray-900;
+      }
+    }
+  }
+  /* END: Avatar */
 }
