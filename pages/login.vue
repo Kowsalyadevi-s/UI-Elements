@@ -1,6 +1,6 @@
 <template>
-  <div class="container mx-auto p-3">
-    <div class="grid grid-flow-col grid-cols-3 h-screen">
+  <div class="container mx-auto">
+    <div class="grid grid-flow-col grid-cols-3 h-screen p-3">
       <div class="col-span-2">
         <div class="flex flex-col h-full justify-center place-items-center">
           <h1>Talk to your tank like Humans</h1>

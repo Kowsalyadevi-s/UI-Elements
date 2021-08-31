@@ -7,6 +7,7 @@
         <h4 class="my-3">Buttons</h4>
         <div>
           <btn @click="clickHandler">Open Commands Dictionary</btn>
+          <btn class="default">Open Commands Dictionary</btn>
           <btn class="dark">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +27,7 @@
           </btn>
         </div>
         <div>
-          <btn class="rounded-full">
+          <btn class="default rounded-full">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-5 w-5 inline-block"
@@ -188,6 +189,24 @@
         <div class="flex space-x-3 align-bottom">
           <dropdown label="Open Commands Dictionary">
             <div class="py-1">
+              <dropdown-item>Option 1</dropdown-item>
+              <dropdown-item>Option 1</dropdown-item>
+            </div>
+            <div class="py-1">
+              <dropdown-item>Option 1</dropdown-item>
+              <dropdown-item>Option 1</dropdown-item>
+            </div>
+            <div>
+              <dropdown-item>Account Settings</dropdown-item>
+              <dropdown-item>Support</dropdown-item>
+              <dropdown-item>License</dropdown-item>
+            </div>
+            <div>
+              <dropdown-item>Sign Out</dropdown-item>
+            </div>
+          </dropdown>
+          <dropdown cls="default" label="Open Commands Dictionary">
+            <div class="py-1">
               <dropdown-item>
                 <p>Signed in as</p>
                 <b>johnmathew@email.com</b>
@@ -275,7 +294,7 @@
               </dropdown-item>
             </div>
           </dropdown>
-          <dropdown label="Pay with" divider right>
+          <dropdown cls="default" label="Pay with" divider right>
             <dropdown-item class="flex space-x-2">
               <div>
                 <svg
@@ -389,10 +408,10 @@
           </dropdown>
         </div>
       </div>
-
+      <!-- Badge -->
       <div>
         <h4 class="my-3">Badges</h4>
-        <div class="space-y-2">
+        <div class="flex flex-col space-y-3">
           <div class="flex space-x-1">
             <badge class="negative" closable @closed="badgeClosed">Speeding</badge>
             <badge class="primary">Badge</badge>
@@ -411,7 +430,7 @@
           </div>
           <div class="flex place-items-center relative space-x-1">
             <Badge
-              class="flex flex-wrap content-center"
+              class="flex flex-wrap content-center primary"
               closable
               @closed="badgeClosed"
             >Out of Service</Badge>
@@ -422,7 +441,17 @@
             <badge class="info">Badge</badge>
             <badge class="positive">Badge</badge>
             <badge class="negative">Badge</badge>
-            <badge class="positive" status statusClass="negative">Badge</badge>
+          </div>
+          <div class="flex space-x-1">
+            <badge class="negative rounded">Speeding</badge>
+            <badge class="primary rounded">Badge</badge>
+            <badge class="secondary rounded">Scheduled Message</badge>
+            <badge class="info filled rounded">Requested</badge>
+            <badge class="positive rounded">Discharge Start</badge>
+            <badge class="negative rounded">Modbus Error</badge>
+          </div>
+          <div class="flex place-items-center relative space-x-1">
+            <badge class status statusClass="negative">Badge</badge>
             <badge status statusClass="warning">Badge</badge>
             <badge status statusClass="info">Badge</badge>
             <badge status statusClass="positive">Badge</badge>
@@ -430,11 +459,11 @@
           </div>
         </div>
       </div>
-
+      <!-- END: Badge -->
       <!-- Avatar -->
-      <div class="flex space-x-6">
-        <div>
-          <h4 class="my-3">Avatar</h4>
+      <div class="flex flex-col">
+        <h4 class="my-3">Avatar</h4>
+        <div class="space-y-3">
           <div class="flex space-x-2 place-items-center">
             <Avatar
               size="xs"
@@ -485,41 +514,58 @@
             <Avatar cls="primary" size="sm" initial="K"></Avatar>
           </div>
         </div>
-        <div>
-          <div class="flex space-x-2 my-5 place-items-center">
-            <div class="flex flex-wrap space-x-1 place-items-center">
-              <Avatar
-                size="xs"
-                userImage
-                class="mt-1"
-                imageSrc="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
-              ></Avatar>
-              <p class="font-medium">John Mathew</p>
-            </div>
-            <dropdown cls="px-3 py-1 " right icon divider>
-              <template #icon>
-                <avatar
-                  imageSrc="https://uifaces.co/our-content/donated/6MWH9Xi_.jpg"
-                  userImage
-                  size="xs"
-                  class="flex mr-2 place-content-center"
-                  cls="positive"
-                ></avatar>Karthick Thangaraju
-              </template>
-              <div class="p-4">
-                <b>karthickt@teezle.com</b>
-                <p class="text-gray-500">Last login: Yesterday</p>
-              </div>
-              <div>
-                <dropdown-item link="/">My Profile</dropdown-item>
-                <dropdown-item link="/preferences">Preference</dropdown-item>
-              </div>
-              <dropdown-item>Logout</dropdown-item>
-            </dropdown>
-          </div>
-        </div>
       </div>
       <!-- END: Avatar -->
+      <!-- Profile Card -->
+      <div class="flex flex-col">
+        <h4 class="my-3">Profile Card</h4>
+        <div class="flex space-x-2 my-5 place-items-center">
+          <btn class="flex place-items-center space-x-1">
+            <Avatar
+              class="flex place-content-center"
+              size="xs"
+              userImage
+              imageSrc="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+            ></Avatar>
+            <p class="font-medium">John Mathew</p>
+          </btn>
+          <dropdown right icon divider>
+            <template #icon>
+              <avatar
+                imageSrc="https://uifaces.co/our-content/donated/6MWH9Xi_.jpg"
+                userImage
+                size="xs"
+                class="flex mr-2 place-content-center"
+                cls="positive"
+              ></avatar>Karthick Thangaraju
+            </template>
+            <div class="p-4">
+              <b>karthickt@teezle.com</b>
+              <p class="text-gray-500">Last login: Yesterday</p>
+            </div>
+            <div>
+              <dropdown-item link="/">My Profile</dropdown-item>
+              <dropdown-item link="/preferences">Preference</dropdown-item>
+            </div>
+            <dropdown-item>Logout</dropdown-item>
+          </dropdown>
+          <dropdown right icon divider>
+            <template #icon>
+              <avatar initial="K" size="xs" class="flex mr-1 place-content-center" cls="positive"></avatar>Karthick Thangaraju
+            </template>
+            <div class="p-4">
+              <b>karthickt@teezle.com</b>
+              <p class="text-gray-500">Last login: Yesterday</p>
+            </div>
+            <div>
+              <dropdown-item link="/">My Profile</dropdown-item>
+              <dropdown-item link="/preferences">Preference</dropdown-item>
+            </div>
+            <dropdown-item>Logout</dropdown-item>
+          </dropdown>
+        </div>
+      </div>
+      <!-- END: Profile Card -->
     </div>
   </div>
 </template>
