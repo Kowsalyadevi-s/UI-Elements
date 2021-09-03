@@ -3,7 +3,7 @@
     :bind="$attrs"
     v-on="$listeners"
     :disabled="disabled"
-    :class="[variant, shape, size, {'outlined': outlined}]"
+    :class="[variant, size, shape, {'outlined': outlined}]"
   >
     <slot>Button</slot>
   </button>
@@ -32,6 +32,14 @@ export default {
       type: Boolean,
       default: false,
     },
+    rounded: {
+      type: Boolean,
+      default: false,
+    },
+    square: {
+      type: Boolean,
+      default: false,
+    },
   },
 };
 </script>
@@ -39,10 +47,29 @@ export default {
 <style lang="postcss" scoped>
 /* Variants */
 button {
-  @apply inline-flex place-items-center leading-5;
+  @apply place-items-center leading-5 text-center;
 
   & svg {
     @apply inline-flex place-items-center h-5 w-5;
+  }
+
+  &.xs {
+    @apply px-2.5 py-1.5 text-xs leading-4;
+    & svg {
+      @apply h-4 w-4;
+    }
+  }
+  &.sm {
+    @apply px-3 py-2 text-sm leading-4;
+    & svg {
+      @apply h-4 w-4;
+    }
+  }
+  &.lg {
+    @apply px-4 py-2 text-base leading-6 rounded-md;
+  }
+  &.xl {
+    @apply px-6 py-3 text-base leading-6 rounded-md;
   }
 
   &:disabled {
@@ -76,26 +103,7 @@ button {
   }
 
   &.outlined {
-    @apply bg-white;
-  }
-
-  &.xs {
-    @apply px-2.5 py-1.5 text-xs leading-4;
-    & svg {
-      @apply h-4 w-4;
-    }
-  }
-  &.sm {
-    @apply px-3 py-2 text-sm leading-4;
-    & svg {
-      @apply h-4 w-4;
-    }
-  }
-  &.lg {
-    @apply px-4 py-2 text-base leading-6;
-  }
-  &.xl {
-    @apply px-6 py-3 text-base leading-6;
+    @apply bg-transparent text-gray-800;
   }
 }
 </style>

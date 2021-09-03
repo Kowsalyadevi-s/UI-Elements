@@ -42,7 +42,7 @@
                 <btn2 disabled>Welcome Button</btn2>
                 <btn2 disabled variant="primary">Welcome Button</btn2>
                 <btn2 disabled variant="dark">Welcome Button</btn2>
-                <btn2 disabledvariant="positive">Welcome Button</btn2>
+                <btn2 disabled variant="positive">Welcome Button</btn2>
                 <btn2 disabled variant="negative">Welcome Button</btn2>
               </div>
             </div>

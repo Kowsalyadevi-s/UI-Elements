@@ -6,7 +6,7 @@
   </div>-->
   <div
     ref="btnGroup"
-    class="btn-group inline-flex"
+    class="btn-group flex"
     :class="[variant, shape, size, {'outlined': outlined}]"
   >
     <slot></slot>
@@ -47,7 +47,7 @@ export default {
 <style lang="postcss" scoped>
 .btn-group {
   & button {
-    @apply rounded-none border-r-0;
+    @apply flex justify-center rounded-none border-r-0 focus:outline-none focus:ring-0;
     &:first-child {
       @apply rounded-tl rounded-bl;
     }
