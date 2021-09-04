@@ -31,6 +31,7 @@ export default {
   plugins: [
     '~/plugins/h8-useronboarding-api',
     '~/plugins/h8-elements.js',
+    '~/plugins/charts.js',
     // '~/plugins/h8-dropdown',
     // '~/plugins/element-btn.js',
   ],
