@@ -27,15 +27,34 @@
       </div>
     </card>
     <card class="p-3">
-      <BarChart :chartdata="chartData" :options="chartOptions" class="relative"></BarChart>
+      <h5>Bar Chart</h5>
+      <BarChart :chartdata="chartData" :options="chartOptions"></BarChart>
     </card>
     <card class="p-3 text-right">
-      <btn2 size="xs" shape="rounded" @click="fillData('line')">Randomize Data</btn2>
+      <div class="flex justify-between">
+        <h5>Line Chart</h5>
+        <btn2 size="xs" shape="rounded" @click="fillData('line')">Randomize Data</btn2>
+      </div>
       <LineChart :chart-data="lineChartData" :options="chartOptions" class="relative"></LineChart>
     </card>
     <card class="p-3 text-right">
-      <btn2 size="xs" shape="rounded" @click="fillData('area',true)">Randomize Data</btn2>
+      <div class="flex justify-between">
+        <h5>Area Chart</h5>
+        <btn2 size="xs" shape="rounded" @click="fillData('area',true)">Randomize Data</btn2>
+      </div>
       <LineChart :chart-data="areaChartData" :options="chartOptions" class="relative"></LineChart>
+    </card>
+    <card class="p-3">
+      <h5>Pie Chart</h5>
+      <PieChart :chart-data="pieChartData" :options="chartOptions" class="relative"></PieChart>
+    </card>
+    <card class="p-3">
+      <h5>Doughnut Chart</h5>
+      <DoughNutChart :chart-data="pieChartData" :options="chartOptions" class="relative"></DoughNutChart>
+    </card>
+    <card class="p-3">
+      <h5>Radar Chart</h5>
+      <RadarChart :chart-data="radaraChartData" :options="chartOptions" class="relative"></RadarChart>
     </card>
   </Layout>
 </template>
@@ -43,8 +62,9 @@
 <script>
 import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "~/tailwind.config.js";
+import DoughNutChart from "../components/elements/DoughNutChart.vue";
 const fullConfig = resolveConfig(tailwindConfig);
-
+const colors = fullConfig.theme.colors;
 const primaryColor = fullConfig.theme.colors.primary;
 const greenColor = fullConfig.theme.colors.emerald;
 export default {
@@ -72,6 +92,57 @@ export default {
             label: "Bookings",
             backgroundColor: greenColor[500],
             data: [40, 20, 12, 39, 10, 40, 39, 80, 40, 20, 12, 11],
+          },
+        ],
+      },
+      pieChartData: {
+        labels: ["Red", "Green", "Yellow"],
+        datasets: [
+          {
+            label: "My First Dataset",
+            data: [300, 50, 100, 100],
+            backgroundColor: [
+              colors.red[500],
+              colors.green[600],
+              colors.yellow[300],
+              colors.gray[300],
+            ],
+            hoverOffset: 4,
+          },
+        ],
+      },
+      radaraChartData: {
+        labels: [
+          "Eating",
+          "Drinking",
+          "Sleeping",
+          "Designing",
+          "Coding",
+          "Cycling",
+          "Running",
+        ],
+        datasets: [
+          {
+            label: "My First Dataset",
+            data: [65, 59, 90, 81, 56, 55, 40],
+            fill: true,
+            backgroundColor: "rgba(255, 99, 132, 0.2)",
+            borderColor: "rgb(255, 99, 132)",
+            pointBackgroundColor: "rgb(255, 99, 132)",
+            pointBorderColor: "#fff",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgb(255, 99, 132)",
+          },
+          {
+            label: "My Second Dataset",
+            data: [28, 48, 40, 19, 96, 27, 100],
+            fill: true,
+            backgroundColor: "rgba(54, 162, 235, 0.2)",
+            borderColor: "rgb(54, 162, 235)",
+            pointBackgroundColor: "rgb(54, 162, 235)",
+            pointBorderColor: "#fff",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgb(54, 162, 235)",
           },
         ],
       },
