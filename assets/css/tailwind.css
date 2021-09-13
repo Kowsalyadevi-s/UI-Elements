@@ -63,6 +63,12 @@
     @apply opacity-40;
   }
 
+  .layout {
+    &.compact {
+      @apply w-2/3;
+    }
+  }
+
   /* Button */
   button {
     @apply inline-flex place-items-center leading-5;
@@ -74,6 +80,26 @@
     &:disabled {
       @apply opacity-50;
     }
+
+    &.xs {
+      @apply px-2.5 py-1.5 text-xs leading-4;
+      & svg {
+        @apply h-4 w-4;
+      }
+    }
+    &.sm {
+      @apply px-3 py-2 text-sm leading-4;
+      & svg {
+        @apply h-4 w-4;
+      }
+    }
+    &.lg {
+      @apply px-4 py-2 text-base leading-6;
+    }
+    &.xl {
+      @apply px-6 py-3 text-base leading-6;
+    }
+
     &.default {
       @apply bg-white border border-gray-300 hover:bg-gray-50 hover:border-gray-400 hover:text-gray-900  focus:ring-2 focus:ring-gray-500 focus:ring-offset-gray-200;
     }
@@ -102,26 +128,7 @@
     }
 
     &.outlined {
-      @apply bg-white;
-    }
-
-    &.xs {
-      @apply px-2.5 py-1.5 text-xs leading-4;
-      & svg {
-        @apply h-4 w-4;
-      }
-    }
-    &.sm {
-      @apply px-3 py-2 text-sm leading-4;
-      & svg {
-        @apply h-4 w-4;
-      }
-    }
-    &.lg {
-      @apply px-4 py-2 text-base leading-6;
-    }
-    &.xl {
-      @apply px-6 py-3 text-base leading-6;
+      @apply bg-transparent text-gray-800;
     }
   }
   /* END: Button */
