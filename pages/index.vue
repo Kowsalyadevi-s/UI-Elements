@@ -411,8 +411,8 @@
       <!-- Badge -->
       <div>
         <h4 class="my-3">Badges</h4>
-        <div class="flex flex-col space-y-3">
-          <div class="flex space-x-1">
+        <div class="space-y-3">
+          <div class="space-x-1">
             <badge class="negative" closable @closed="badgeClosed">Speeding</badge>
             <badge class="primary">Badge</badge>
             <badge class="secondary">Scheduled Message</badge>

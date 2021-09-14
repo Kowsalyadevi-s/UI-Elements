@@ -7,8 +7,8 @@
           class="muted"
         >Base Web offers a robust suite of components out of the box. These include complex, ready-to-use components such as Datepicker and low-level composable primitives, such as Layer.</p>
       </Heading>
-      <div class="flex flex-col space-y-6 p-4">
-        <div class>
+      <div class="flex flex-col space-y-6">
+        <Card class="p-3">
           <Heading>
             <h4>Buttons</h4>
             <p
@@ -168,8 +168,10 @@
               </div>
             </div>
           </div>
-        </div>
-        <div>
+        </Card>
+
+        <!-- Button Group -->
+        <Card class="p-3">
           <Heading>
             <h4>Button Groups</h4>
             <p
@@ -213,16 +215,145 @@
               </div>
             </div>
           </div>
-        </div>
+        </Card>
+        <!-- END: Button Group -->
+
+        <!-- Badge -->
+        <Card class="p-3">
+          <Heading>
+            <h4>Badges</h4>
+          </Heading>
+          <div class="space-y-2 space-x-1">
+            <Badge>Badge</Badge>
+            <Badge variant="gray">Badge</Badge>
+            <Badge variant="primary">Badgesss</Badge>
+            <Badge variant="secondary">Scheduled Message</Badge>
+            <Badge variant="info">Requested</Badge>
+            <Badge variant="positive">Discharge Start</Badge>
+            <Badge variant="warning">Discharge Start</Badge>
+            <Badge variant="negative">Modbus Error</Badge>
+            <hr />
+            <Badge variant="dark" filled>Badge</Badge>
+            <Badge variant="primary" filled>Badge</Badge>
+            <Badge variant="secondary" filled>Badge</Badge>
+            <Badge variant="info" filled>Badge</Badge>
+            <Badge variant="positive" filled>Badge</Badge>
+            <Badge variant="warning" filled>Badge</Badge>
+            <Badge variant="negative" filled>Badge</Badge>
+            <hr />
+            <Badge variant="gray" closable>Out of Service</Badge>
+            <Badge variant="primary" closable>Out of Service</Badge>
+            <Badge variant="secondary" closable>Out of Service</Badge>
+            <Badge variant="positive" closable>Out of Service</Badge>
+            <Badge variant="negative" closable>Speeding</Badge>
+            <hr />
+            <Badge variant="primary" filled closable>Out of Service</Badge>
+            <Badge variant="secondary" filled closable>Out of Service</Badge>
+            <Badge variant="positive" filled closable>Out of Service</Badge>
+            <Badge variant="negative" filled closable>Speeding</Badge>
+            <Badge variant="dark" closable>Out of Service</Badge>
+            <hr />
+            <Badge size="xs">Badge</Badge>
+            <Badge size="xs" variant="gray">Badge</Badge>
+            <Badge size="xs" variant="primary">Badge</Badge>
+            <Badge size="xs" variant="secondary">Scheduled Message</Badge>
+            <Badge size="xs" variant="info">Requested</Badge>
+            <Badge size="xs" variant="positive">Discharge Start</Badge>
+            <Badge size="xs" variant="negative">Modbus Error</Badge>
+            <hr />
+            <Badge size="lg">Badge</Badge>
+            <Badge size="lg" variant="gray">Badge</Badge>
+            <Badge size="lg" variant="primary">Badge</Badge>
+            <Badge size="lg" variant="secondary">Scheduled Message</Badge>
+            <Badge size="lg" variant="info">Requested</Badge>
+            <Badge size="lg" variant="positive">Discharge Start</Badge>
+            <Badge size="lg" variant="negative">Modbus Error</Badge>
+            <hr />
+            <Badge variant="unfilled">
+              <Status variant="positive" cls="mr-1" />Badge
+            </Badge>
+            <Badge variant="unfilled">
+              <Status variant="negative" cls="mr-1" />Badge
+            </Badge>
+            <Badge variant="unfilled">
+              <Status variant="info" cls="mr-1" />Badge
+            </Badge>
+            <Badge variant="unfilled">
+              <Status variant="gray" cls="mr-1" />Badge
+            </Badge>
+            <hr />
+            <Badge variant="positive" closable>
+              <Status variant="positive" cls="mr-1" />Badge
+            </Badge>
+            <Badge variant="negative" closable>
+              <Status variant="negative" cls="mr-1" />Badge
+            </Badge>
+            <Badge variant="warning" closable>
+              <Status variant="warning" cls="mr-1" />Badge
+            </Badge>
+            <Badge variant="info" closable>
+              <Status variant="info" cls="mr-1" />Badge
+            </Badge>
+            <Badge variant="gray" closable>
+              <Status variant="gray" cls="mr-1" />Badge
+            </Badge>
+
+            <hr />
+            <Badge variant="primary" closable>
+              <Status variant="primary" cls="mr-1" />Lengthy content badge text
+            </Badge>
+          </div>
+        </Card>
+        <!-- END: Badge -->
+
+        <!-- Status Indicator -->
+        <Card class="p-3">
+          <Heading>
+            <h4>Status Indicator</h4>
+          </Heading>
+          <Status variant="primary" cls="inline-block" />
+          <Status variant="positive" cls="inline-block" />
+          <Status variant="negative" cls="inline-block" />
+          <Status variant="warning" cls="inline-block" />
+          <Status variant="dark" cls="inline-block" />
+          <Status variant="gray" cls="inline-block" />
+        </Card>
+        <!-- END: Status Indicator -->
       </div>
     </div>
   </Layout>
 </template>
 
 <script>
-import BtnGroup from "../components/elements/BtnGroup.vue";
+// import BtnGroup from "../components/elements/BtnGroup.vue";
+import {
+  Btn2,
+  Layout,
+  BarChart,
+  LineChart,
+  Card,
+  Badge,
+  Status,
+  Heading,
+  Dropdown,
+  DropdownItem,
+  Avatar,
+} from "@tkweb/elements";
+
 export default {
-  components: { BtnGroup },
+  components: {
+    Btn2,
+    Layout,
+    BarChart,
+    Dropdown,
+    Badge,
+    Status,
+    DropdownItem,
+    LineChart,
+    Card,
+    Heading,
+    Avatar,
+  },
 };
 </script>
 

@@ -1,6 +1,7 @@
 import Vue from 'vue';
 // const { Btn } = require('@tkweb/elm').default
-// import H8UiElements from "@tkweb/ui-elements"
+import H8UiElements from "@tkweb/ui-elements"
+// import UiElements from "@tkweb/elements"
 
 /** @ Usage in Vue component */
 // import { Btn, Badge } from "@tkweb/ui-elements"
@@ -9,4 +10,5 @@ import Vue from 'vue';
 //     Badge
 // }
 
-// Vue.use(H8UiElements)
+Vue.use(H8UiElements)
+// Vue.use(UiElements)

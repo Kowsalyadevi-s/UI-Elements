@@ -168,14 +168,14 @@
   /* Badges */
 
   .badge {
-    @apply inline-block px-3 py-0.5 text-sm font-normal rounded-full text-gray-900;
+    @apply text-gray-800 bg-gray-100 text-sm;
 
-    &.rounded {
-      @apply px-2;
+    &.unfilled {
+      @apply text-gray-800 bg-transparent;
     }
 
     &.gray {
-      @apply text-gray-700 bg-gray-200;
+      @apply text-gray-800 bg-gray-200;
       &.filled {
         @apply text-gray-900 bg-gray-500;
       }
@@ -218,18 +218,26 @@
     &.warning {
       @apply text-warning-900 bg-warning-100;
       &.filled {
-        @apply text-warning-100 bg-warning-600;
+        @apply text-warning-100 bg-warning-500;
       }
     }
     &.dark {
       @apply text-gray-100 bg-gray-900;
+    }
+
+    &.xs {
+      @apply text-xs;
+    }
+
+    &.md {
+      @apply text-base;
     }
   }
   /* END: Badges */
 
   /* Status */
   .status-dot {
-    @apply w-2 h-2 bg-gray-500 inline-block rounded-full;
+    @apply w-2 h-2 bg-gray-500 inline-flex rounded-full;
 
     &.primary {
       @apply bg-primary-600;
