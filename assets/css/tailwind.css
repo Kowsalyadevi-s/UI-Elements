@@ -184,45 +184,46 @@
     &.primary {
       @apply text-primary-800 bg-primary-100;
       &.filled {
-        @apply text-primary-100 bg-primary-700;
+        @apply text-white bg-primary-600;
       }
     }
 
     &.secondary {
       @apply text-secondary-800 bg-secondary-100;
       &.filled {
-        @apply text-secondary-100 bg-secondary-700;
+        @apply text-white bg-secondary-700;
       }
     }
 
     &.info {
-      @apply text-info-800 bg-info-100;
+      @apply text-info-700 bg-info-100;
       &.filled {
-        @apply text-info-100 bg-info-600;
+        @apply text-white bg-info-600;
       }
     }
 
     &.positive {
       @apply text-positive-800 bg-positive-100;
       &.filled {
-        @apply text-positive-100 bg-positive-600;
+        @apply text-white bg-positive-600;
       }
     }
 
     &.negative {
-      @apply text-negative-800 bg-negative-100;
+      @apply text-negative-700 bg-negative-100;
       &.filled {
-        @apply text-negative-100 bg-negative-600;
+        @apply text-white bg-negative-600;
       }
     }
     &.warning {
       @apply text-warning-900 bg-warning-100;
       &.filled {
-        @apply text-warning-100 bg-warning-500;
+        @apply text-white bg-warning-500;
       }
     }
+
     &.dark {
-      @apply text-gray-100 bg-gray-900;
+      @apply text-gray-50 bg-gray-900;
     }
 
     &.xs {
@@ -237,13 +238,17 @@
 
   /* Status */
   .status-dot {
-    @apply w-2 h-2 bg-gray-500 inline-flex rounded-full;
+    @apply w-2 h-2 bg-gray-200 inline-flex rounded-full;
 
     &.primary {
       @apply bg-primary-600;
     }
+
     &.dark {
       @apply bg-gray-900;
+    }
+    &.gray {
+      @apply bg-gray-400;
     }
 
     &.info {
@@ -363,4 +368,20 @@
     }
   }
   /* END: Avatar */
+
+  /* List Navigation */
+  .nav-vertical.router-link-exact-active,
+  .nav-vertical.nuxt-link-exact-active {
+    @apply relative bg-primary-50 rounded-l-none text-primary-600;
+
+    &::before {
+      content: "";
+      @apply absolute h-1.5 rounded-full w-1.5 bg-primary-600 left-2 top-auto bottom-auto;
+    }
+    /* &::after {
+      content: "\2192";
+      @apply absolute inline-flex place-items-center h-full inset-y-0 right-2 transition-opacity duration-700;
+    } */
+  }
+  /* END: List Navigation */
 }

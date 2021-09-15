@@ -338,6 +338,9 @@ import {
   Dropdown,
   DropdownItem,
   Avatar,
+  VerticalNav,
+  VerticalNavSection,
+  VerticalNavItem,
 } from "@tkweb/elements";
 
 export default {
@@ -353,6 +356,9 @@ export default {
     Card,
     Heading,
     Avatar,
+    VerticalNav,
+    VerticalNavSection,
+    VerticalNavItem,
   },
 };
 </script>
