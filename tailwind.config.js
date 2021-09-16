@@ -16,6 +16,7 @@ module.exports = {
   // important: true,
   theme: {
     extend: {
+      border: ['responsive', 'hover'],
     },
     screens: {
       sm: '640px',
@@ -1003,5 +1004,7 @@ module.exports = {
     wordBreak: ['responsive'],
     zIndex: ['responsive', 'focus-within', 'focus'],
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-debug-screens'),
+  ],
 }

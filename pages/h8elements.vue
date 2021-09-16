@@ -325,42 +325,7 @@
 </template>
 
 <script>
-// import BtnGroup from "../components/elements/BtnGroup.vue";
-import {
-  Btn2,
-  Layout,
-  BarChart,
-  LineChart,
-  Card,
-  Badge,
-  Status,
-  Heading,
-  Dropdown,
-  DropdownItem,
-  Avatar,
-  VerticalNav,
-  VerticalNavSection,
-  VerticalNavItem,
-} from "@tkweb/elements";
-
-export default {
-  components: {
-    Btn2,
-    Layout,
-    BarChart,
-    Dropdown,
-    Badge,
-    Status,
-    DropdownItem,
-    LineChart,
-    Card,
-    Heading,
-    Avatar,
-    VerticalNav,
-    VerticalNavSection,
-    VerticalNavItem,
-  },
-};
+export default {};
 </script>
 
 <style lang="postcss" scoped>

@@ -1,18 +1,8 @@
 <template>
-  <Layout class="grid md:grid-cols-12 gap-2">
-    <VerticalNav class="w-full col-span-2">
-      <VerticalNavSection title="Reports">
-        <VerticalNavItem to="/page">Geofence Report</VerticalNavItem>
-        <VerticalNavItem>Asset Dwell Report</VerticalNavItem>
-        <VerticalNavItem>TIR Report</VerticalNavItem>
-        <VerticalNavItem>Fill Report</VerticalNavItem>
-        <VerticalNavItem>Discharge Report</VerticalNavItem>
-        <VerticalNavItem>Refill Report</VerticalNavItem>
-        <VerticalNavItem>Command Report</VerticalNavItem>
-        <VerticalNavItem>Decoded Messages</VerticalNavItem>
-        <VerticalNavItem>Raw Messages</VerticalNavItem>
-      </VerticalNavSection>
-    </VerticalNav>
+  <Layout class="grid md:grid-cols-12 gap-1">
+    <div class="col-span-2 border-r">
+      <ReportsNavigation />
+    </div>
     <div class="col-span-10 grid grid-cols-2 gap-2 pr-4 py-2">
       <Card class="p-3">
         <div class="space-y-4">
@@ -77,49 +67,12 @@
 <script>
 import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "~/tailwind.config.js";
-import {
-  Btn2,
-  Layout,
-  BarChart,
-  LineChart,
-  PieChart,
-  RadarChart,
-  DoughNutChart,
-  Card,
-  Badge,
-  Status,
-  Heading,
-  Dropdown,
-  DropdownItem,
-  Avatar,
-  VerticalNav,
-  VerticalNavSection,
-  VerticalNavItem,
-} from "@tkweb/elements";
+
 const fullConfig = resolveConfig(tailwindConfig);
 const colors = fullConfig.theme.colors;
 const primaryColor = fullConfig.theme.colors.primary;
 const greenColor = fullConfig.theme.colors.emerald;
 export default {
-  components: {
-    Btn2,
-    Layout,
-    BarChart,
-    Dropdown,
-    Badge,
-    Status,
-    DropdownItem,
-    LineChart,
-    PieChart,
-    DoughNutChart,
-    RadarChart,
-    Card,
-    Heading,
-    Avatar,
-    VerticalNav,
-    VerticalNavSection,
-    VerticalNavItem,
-  },
   data() {
     return {
       lineChartData: null,

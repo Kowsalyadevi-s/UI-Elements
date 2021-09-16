@@ -1,23 +1,7 @@
 import Vue from 'vue';
-// const { Btn } = require('@tkweb/elm').default
 // import H8UiElements from "@tkweb/ui-elements"
-
-// import {
-//     Btn2,
-//     Layout,
-//     BarChart,
-//     LineChart,
-//     Card,
-//     Badge,
-//     Status,
-//     Heading,
-//     Dropdown,
-//     DropdownItem,
-//     Avatar,
-//     VerticalNav,
-//     VerticalNavSection,
-//     VerticalNavItem,
-// } from '@tkweb/elements'
+import H8UiElements from '@tkweb/elements'
+Vue.use(H8UiElements)
 
 /** @ Usage in Vue component */
 // import { Btn, Badge } from "@tkweb/ui-elements"
@@ -25,6 +9,3 @@ import Vue from 'vue';
 //     Btn,
 //     Badge
 // }
-
-// Vue.use(H8UiElements)
-// Vue.components(Layout)
