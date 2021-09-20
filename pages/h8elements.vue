@@ -1,19 +1,25 @@
 <template>
   <Layout class="container p-5">
     <div>
+
+      
       <Heading>
         <h2>H8UI Element Collections</h2>
-        <p
-          class="muted"
-        >Base Web offers a robust suite of components out of the box. These include complex, ready-to-use components such as Datepicker and low-level composable primitives, such as Layer.</p>
+        <p class="muted">
+          Base Web offers a robust suite of components out of the box. These
+          include complex, ready-to-use components such as Datepicker and
+          low-level composable primitives, such as Layer.
+        </p>
       </Heading>
       <div class="flex flex-col space-y-6">
         <Card class="p-3">
           <Heading>
             <h4>Buttons</h4>
-            <p
-              class="muted"
-            >Buttons provide cues for actions and events. These fundamental components allow users to process actions or navigate an experience.</p>
+            <p class="muted">
+              Buttons provide cues for actions and events. These fundamental
+              components allow users to process actions or navigate an
+              experience.
+            </p>
           </Heading>
           <div class="flex flex-col space-y-4">
             <div class="space-y-2">
@@ -174,9 +180,11 @@
         <Card class="p-3">
           <Heading>
             <h4>Button Groups</h4>
-            <p
-              class="muted"
-            >Buttons provide cues for actions and events. These fundamental components allow users to process actions or navigate an experience.</p>
+            <p class="muted">
+              Buttons provide cues for actions and events. These fundamental
+              components allow users to process actions or navigate an
+              experience.
+            </p>
           </Heading>
           <div class="space-y-2">
             <h6>Outlined</h6>
@@ -319,6 +327,124 @@
           <Status variant="gray" cls="inline-block" />
         </Card>
         <!-- END: Status Indicator -->
+
+        <!--Input Box -->
+        <Card class="p-3">
+          <Heading>
+            <h4>Input Box</h4>
+          </Heading>
+          <div class="space-y-2 ">
+            <div>
+          <input
+            type="text"
+            class="
+              w-64
+              h-9
+              px-2
+              rounded
+              focus:outline-none
+              focus:ring-2 focus:ring-primary
+              focus:border-transparent
+              hover:bg-gray-50
+              hover:border-gray-400
+              hover:text-gray-900
+              border-opacity-50 border border-gray-300
+            "
+          />
+          </div>
+          <div>
+          <input
+            type="text"
+            class="
+              w-64
+              h-9
+              px-2
+              rounded
+              focus:outline-none
+              focus:ring-2 focus:ring-primary
+              focus:border-transparent
+              hover:bg-gray-50
+              hover:border-gray-400
+              hover:text-gray-900
+              border-opacity-50 border border-gray-300
+            "
+            placeholder="you@gmail.com"
+          />
+          </div>
+
+          <div class="relative">
+            <span
+              class="absolute inset-y-0 flex items-center pl-2 text-gray-400"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </span>
+            <input
+              type="text"
+              class="
+                w-64
+                h-9
+                px-10
+                rounded
+                focus:outline-none
+                focus:ring-2 focus:ring-primary
+                focus:border-transparent
+                hover:bg-gray-50
+                hover:border-gray-400
+                hover:text-gray-900
+                border-opacity-50 border border-gray-
+              "
+              placeholder="Enter Email"
+            />
+          </div>
+          <div class="mt-1 relative rounded-md shadow-sm">
+            <div
+              class="
+                absolute
+                inset-y-0
+                left-0
+                pl-3
+                flex
+                items-center
+                pointer-events-none
+              "
+            >
+              <span class="text-gray-500 sm:text-sm"> http:// </span>
+            </div>
+            <input
+              type="text"
+              class="
+                w-64
+                h-9
+                px-14
+                rounded
+                focus:outline-none
+                focus:ring-2 focus:ring-primary
+                focus:border-transparent
+                hover:bg-gray-50
+                hover:border-gray-400
+                hover:text-gray-900
+                border-opacity-50 border border-gray-
+              "
+              placeholder="www.xyz.com"
+            />
+          </div>
+          </div>
+       
+        </Card>
+        <!-- END: Input Box -->
       </div>
     </div>
   </Layout>
@@ -328,5 +454,4 @@
 export default {};
 </script>
 
-<style lang="postcss" scoped>
-</style>
+<style lang="postcss" scoped></style>

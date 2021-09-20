@@ -46,7 +46,7 @@
   }
 
   input[type="text"] {
-    @apply block border px-2 border-gray-400 rounded focus:shadow border-opacity-50;
+    @apply  border  border-gray-400 rounded focus:shadow border-opacity-50;
   }
 }
 
